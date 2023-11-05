@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Book
+from .models import Book, UserBookRelation
 
 
 @admin.register(Book)
@@ -9,4 +9,10 @@ class AdminDisplay(admin.ModelAdmin):
         'name',
         'price',
     ]
+
+
+@admin.register(UserBookRelation)
+class UserBookRelationAdmin(admin.ModelAdmin):
+    pass
+
 
